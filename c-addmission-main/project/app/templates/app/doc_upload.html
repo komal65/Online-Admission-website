@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docupload</title>
+    <link rel="stylesheet" href="{% static '/css/Docupload.css' %}">
+</head>
+<body>
+    <header>
+        <div class="college">
+            <div class="headerfelx">
+                <div class="pccoerlogo" id="pccoerlogo">
+                    <img src="{%static 'images/pccoer.in.png' %}" alt="pcetlogo" srcset="">
+                </div>
+       
+                <div class="college_info">
+                    <p id="pcet">
+                        Pimpri Chinchwad Education Trust's
+                    </p>
+                    <p id="college_name">
+                        PIMPRI CHINCHWAD COLLEGE OF ENGINEERING & RESEARCH
+                        </p>
+                    <p id="description">
+                         An ISO 9001:2015 Certified Institute / Computer Engineering | Electronics & Telecommunication Engineering | Civil Engineering |
+                            Mechanical Engineering Programs are NBA Accredited, NAAC A++ Accredited
+                    </p>
+                     <p id="description1">(Approved by Govt. of Maharashtra, Affiliated to SPPU, Approved by AICTE, DTE CODE - 6822)</p>
+                </div>
+ 
+             <div class="pcetlogo" id="pcetlogo">
+                <img src="{%static 'images/pcetlogo.jpeg' %}" alt="pcetlogo" srcset="">
+            </div>
+        </div>
+    </div>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Department</li>
+            <li> Admission</li>
+        </ul>
+    </nav>
+
+    <div class="announcements">
+        <div class="a1">Announcements</div>
+        <div class="a2">
+            <ul>
+                <li><a href="http://www.pccoer.com/pdf/fy-cutoff-2022-23.pdf">F.Y. Cutoffs 2023-24</a></li>
+                <li><a href="http://www.pccoer.com/pdf/co/DSE%20Cut%20Off%202022-23.pdf">DSE Cutoffs 2023-24</a></li>
+                <li><a href="http://www.pccoer.com/pdf/PCET-Brochure-2023-24.pdf">PCET_PCCOER Brochuer</a></li>
+                <li><a href="{% url 'admission' %}">Admission From</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="heading">Upload Your Sanned Documents</div>
+        <form action="{% url 'document' %}" method = 'POST' enctype="multipart/form-data">
+            {% csrf_token %}
+        <div class="input">
+            <div class="upload">
+                <input type="file" name="uploadfile1" id="img" />
+                <label for="img">Allotment Letter</label>
+            </div>
+            <div class="upload">
+                <input type="file" name="uploadfile2" id="img" />
+                <label for="img">MHT-CET/ JEE Score Card</label>
+            </div>
+            <div class="upload">
+                <input type="file" name="uploadfile3" id="img" />
+                <label for="img">SSC Marksheet</label>
+            </div>
+            <div class="upload">
+                <input type="file" name="uploadfile4" id="img" />
+                <label for="img">HSC Marksheet</label>
+            </div>
+            <div class="upload">
+                <input type="file" name="uploadfile5" id="img" />
+                <label for="img">Adhar Card</label>
+            </div>
+            <div class="upload">
+                <input type="file" name="uploadfile6" id="img" />
+                <label for="img">Caste Certificate</label>
+            </div>
+            <div class="upload">
+                <input type="file" name="uploadfile7" id="img" />
+                <label for="img">Caste Validity</label>
+            </div>
+    </div>
+    <button id="submit" > Submit </button>
+</form>
+</body>
+</html>

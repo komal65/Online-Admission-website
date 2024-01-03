@@ -1,0 +1,427 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+
+.main{
+  padding-left: 10rem;
+  padding-right: 10rem;
+  border:3px solid black;
+  margin:4rem;
+  padding-bottom: 15rem;
+}
+header {
+  height: auto;
+  /*width: auto;*/
+  display: flex;
+  padding: 0.5rem;
+}
+.headerfelx {
+  position: relative;
+  top: 0rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin: 0 7rem;
+}
+
+#pccoerlogo img {
+  width: 7rem;
+  height: 7rem;
+
+  margin-top: -0.5rem;
+}
+#pcetlogo img {
+  width: 7rem;
+  height: 7rem;
+}
+
+.college {
+  text-align: center;
+  line-height: 1.7rem;
+  margin-top: -0.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+#pcet,
+#college_name {
+  color: #3b5999;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+#pcet {
+  margin-top: 1rem;
+}
+
+#description,
+#description1 {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  line-height: 1rem;
+  margin-top: -1rem;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  padding: 0 5rem;
+}
+#description1 {
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
+}
+
+#college_name {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+  margin-top: -1rem;
+}
+
+.nav {
+  height: 2.5rem;
+  width: auto;
+  background-color: rgb(103, 201, 246);
+  margin-top: -1.5rem;
+  display: flex;
+  justify-content: center;
+}
+.nav ul {
+  width: 40rem;
+  display: flex;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  color: white;
+  font-weight: bold;
+}
+.nav li {
+  height: 2.3rem;
+  margin-top: -1rem;
+ 
+}
+
+.nav li:hover {
+  background-color: #0d68c4;
+  height: auto;
+}
+.announcements {
+  background-color: white;
+  height: 2rem;
+  display: flex;
+}
+
+.a1 {
+  width: 13rem;
+  color: white;
+  background-color: rgb(66, 128, 222);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 4rem;
+}
+
+.a2 {
+  flex-grow: 1;
+
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.a2 ul {
+  display: flex;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  animation: loop 20s linear infinite;
+}
+
+.a2 li {
+  margin-left: 5rem;
+  color: #3b5999;
+  margin-top: 0.5rem;
+
+}
+.a2 li a{
+  text-decoration: none;
+}
+
+.header{
+    /* height:15rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:-1rem;
+    padding:1rem;
+    font-family: "Poppins", sans-serif;
+    color:#0d68c4
+}
+.header :nth-child(2){
+   
+    margin-top:-1rem;
+}
+table,th,tr,td{
+    border:1px solid rgb(114, 111, 111);
+    border-collapse:collapse ;
+    padding: 1.3rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;  
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+table input{
+  height:1.7rem;
+  margin: 0.1rem 0.1rem;
+  width:100%;
+    outline:none;
+    border: none;
+    border-bottom: 1px solid rgb(131, 129, 129);
+ 
+}
+table td[rowspan="2"]{
+  width:8rem;
+}
+.branch{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:4rem;
+    font-size: 1.1rem;
+    font-family: "Poppins", sans-serif;
+   
+    left:18rem;
+   
+}
+.branch input{
+    margin-left: 0.5rem;
+   
+}
+#cb[type="checkbox"]{
+ width:1rem;
+ height:1rem;
+
+}
+
+.first-div, .local-add, .more_info, .Admission_round, .other_info{
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+}
+.stu_info{
+  font-family: "Poppins", sans-serif;
+ 
+}
+.first-div{
+  margin-left: 1rem;
+}
+.first-div input, .local-add input, .parent_info input, .more_info input, .more_info select, .Admission_round input , .other_info input{
+  height:1.4rem;
+  margin: 0.1rem 0.1rem;
+  width:15rem;
+  font-size: 1rem;
+  background-color: rgb(238, 236, 236);
+  outline:none;
+  border:1px solid lightgrey;
+  border-radius: 0.2rem;
+}
+
+.stu_info p span{
+  margin-left:5rem;
+
+}
+.stu_info input{
+    width:10rem;
+}
+.parent_info{
+  margin-top: 4rem;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+#firstspan{
+  position: relative;
+  right:0.6rem;
+}
+.parent_info p:nth-child(3) input,.parent_info p:nth-child(5) input {
+  width:13rem;
+  font-size: 1.1rem;
+}
+.local-add p span input{
+ 
+  width:13rem;
+  font-size: 1.1rem;
+}
+.local-add p {
+  margin-left: 1rem;
+ 
+}
+.local-add label{
+position: relative;
+right:1rem;
+ 
+}
+#local-add {
+  margin-left: 4rem;
+}
+
+.Admission_round p{
+  margin-right:-1rem;
+  display:flex;
+  flex-wrap: wrap;
+ 
+ 
+}
+.addmission_options{
+  margin-left: 1rem;
+}
+.Admission_round input[type="checkbox"]{
+  margin: 0.5rem 0.5rem;
+}
+.Academic_det input[type="number"] {
+  width:7rem;
+  outline:none;
+  border: none;
+  border-bottom: 1px solid rgb(131, 129, 129);
+}
+
+.Hostel_info :nth-child(3), .other_info :nth-child(11), .other_info :nth-child(8){
+  text-indent: 1.7rem;
+}
+
+.Submit_form{
+  background-color: #3b5999;
+  color:white;
+  width:8.5rem;
+  height:3.3rem;
+  border:none;
+  font-size: 1.3rem;
+  position: relative;
+  left:45%;
+  top:5rem;
+  margin-bottom:3rem;
+  padding:0.8rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  letter-spacing: 0.02rem;
+}
+#local-add input{
+  width:25rem;
+}
+#s1,#s2,#s3, #s4,#s5, #s6, #s7,#s8, #s9,#s10{
+  display: none;
+  font-size: 1rem;
+}
+
+
+ .declaration {
+  position: relative;
+  right:4rem;
+  top:3rem;
+}
+.declaration label{
+  position: relative;
+  right:2rem;
+  letter-spacing: 0.01rem;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #pccoerlogo img {
+    position: relative;
+    right: 0rem;
+  }
+  #pcet {
+    font-size: 1rem;
+    margin-top: -1rem;
+  }
+  #college_name {
+    font-size: 1.5rem;
+  }
+  header,
+  .headerfelx {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    margin: 0 -1rem;
+  }
+  #description,
+  #description1 {
+    padding: 0 0.1rem;
+    font-size: 0.6rem;
+  }
+
+  .a1 {
+    width: 8rem;
+
+    position: relative;
+    padding-left: 1rem;
+  }
+  .announcements {
+    height: 1.7rem;
+  }
+  .a2 {
+    position: relative;
+    right: 0rem;
+    width: 23rem;
+  }
+  .a2 li {
+    margin-left: 1rem;
+
+    width: 13rem;
+  }
+
+  #pcetlogo img {
+    margin-top: -2rem;
+  }
+  .nav {
+    height: 2rem;
+
+    margin-top: 0rem;
+    justify-content: center;
+  }
+  .nav ul {
+    margin-left: -0.9rem;
+  }
+  .nav li,
+  .a1,
+  .a2 {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 1506px) {
+  .headerfelx {
+    margin: 0 1rem;
+  }
+}
+@media screen and (max-width: 1320px) {
+  #pcet {
+    font-size: 1.4rem;
+  }
+  #college_name {
+    font-size: 1.5rem;
+  }
+  .a2 li {
+    margin-left: 2rem;
+  }
+}

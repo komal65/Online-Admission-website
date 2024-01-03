@@ -1,0 +1,264 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static '/css/admission.css' %}">
+    <title>Admission Form</title>
+</head>
+<body>
+    
+    <header>
+        <div class="college">
+            <div class="headerfelx">
+                <div class="pccoerlogo" id="pccoerlogo">
+                    <img src="{%static 'images/pccoer.in.png' %}" alt="pcetlogo" srcset="">
+                </div>
+        
+                <div class="college_info">
+                    <p id="pcet">
+                        Pimpri Chinchwad Education Trust's
+                    </p>
+                    <p id="college_name">
+                        PIMPRI CHINCHWAD COLLEGE OF ENGINEERING & RESEARCH
+                        </p>
+                    <p id="description">
+                         An ISO 9001:2015 Certified Institute / Computer Engineering | Electronics & Telecommunication Engineering | Civil Engineering | 
+                            Mechanical Engineering Programs are NBA Accredited, NAAC A++ Accredited
+                    </p>
+                     <p id="description1">(Approved by Govt. of Maharashtra, Affiliated to SPPU, Approved by AICTE, DTE CODE - 6822)</p>
+                </div>
+  
+             <div class="pcetlogo" id="pcetlogo">
+                <img src="{%static 'images/pcetlogo.jpeg' %}" alt="pcetlogo" srcset="">
+            </div>
+        </div>
+    </div>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Department</li>
+            <li> Admission</li>
+        </ul>
+    </nav>
+
+    <div class="announcements">
+        <div class="a1">Announcements</div>
+        <div class="a2">
+            <ul>
+                <li><a href="http://www.pccoer.com/pdf/fy-cutoff-2022-23.pdf">F.Y. Cutoffs 2023-24</a></li>
+                <li><a href="http://www.pccoer.com/pdf/co/DSE%20Cut%20Off%202022-23.pdf">DSE Cutoffs 2023-24</a></li>
+                <li><a href="http://www.pccoer.com/pdf/PCET-Brochure-2023-24.pdf">PCET_PCCOER Brochuer</a></li>
+                <li>Admission From</li>
+            </ul>
+        </div>
+        </div>
+        </div>
+
+        <div class="main">
+            <div class="header">
+                <h1>Aplication Form For Admission to First Year</h1>
+                <h1>Academic Year 2023-24</h1>
+            </div>
+        <form action="{% url 'updateprofile' %}" method = 'POST' enctype="multipart/form-data" onsubmit=" return Validate()">
+            {% csrf_token %}
+            <div class="table_content">
+                <table>
+                    <tr>
+                        <td>
+                           <span>Merit No. MHT-CET/JEE :</span> 
+                            <input type="number" class="Merit_no" name="merit_no"/>
+                        </td>
+                        <td>
+                            MHT-CET/JEE % :
+                            <input type="number" class=" MHT-CET/JEE % " name="mht-cet-jee"/>
+                        </td>
+                        <td rowspan="2"> 
+                            <input type="file" name="pic">Photo</td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <span>Name of Qualifying Exam :</span> 
+                            HSC
+                        </td>
+                        <td>
+                            Exam seat no of HSC : 
+                            <input type="text" class="Seat_no_HSC" name="seat_no_hsc"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          Marks obtained in HSC
+                          <input type="number" class="Marks_HSC" name = "marks_hsc"/>
+                        </td>
+                        <td>
+                            Percentage in HSC
+                            <input type="number" class="Percentage_HSC" name="percentage_hsc" />
+                        </td>
+                        <td rowspan="2">
+                            <input type="file" name="pic2" > Signature</td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <span>Name of Board :</span> 
+                            <input type="text" class="Name_of_board" name="name_of_board" />
+                        </td>
+                        <td>
+                           Name of previous college
+                            <input type="text" class="Prev_clg_name" name="prev_clg_name"/>
+                        </td>
+                    </tr>
+                </table>
+                
+                <div class="branch"  required>
+                    <h3>Branch</h3>
+                    <span>1] Mechanical<input type="checkbox" name="" id="cb">
+                        </span>
+
+                    <span>2] E&TC<input type="checkbox" name="" id="cb">
+                        </span>
+                    <span>3] Computer<input type="checkbox" name="" id="cb">
+                       </span>
+                    <span>4] Civil<input type="checkbox" name="" id="cb">
+                        </span>
+                    <span>5] IT<input type="checkbox" name="" id="">
+                        </span>
+                </div>
+        </div>
+
+        <div class="stu_info">
+            <h2>Student Information</h2>
+            <div class="first-div">
+                <p><span>Student Name : <input type="text" class="Stud_Name" required="" name="stud_name"/></span>
+               <span>Surname : <input type="text" class="Stud_surname"  required="" name="stud_surname"/></span> </p>
+           <p><span id="s1" style="color: red;"></span> </p>
+            <p><span>Father/Husband Name : <input type="text" class="Father_name"  required="" name="father_name"/></span>
+              <span>Mother's Name: <input type="text" class="Mother_name"  required="" name="mother_name"/></span>
+            </p> 
+            <p><span id="s2" style="color: red;"></span> </p>
+          </div>
+          
+         
+          <div class="parent_info">
+            <p>1.<span id="firstspan">Parent's Full Name : <input type="text" class="Parent_name"  required="" name="parent_name"/></span></p>
+                <p> <span>Permanent Address : <input type="text" class="Permanent_add"  required="" name="p_add"/></span></p>
+                <p><span>State : <input type="text" class="State"  required="" name="pstate"/></span>
+                <span>District: <input type="text" class="District"  required="" name="pdistrict"/> </span></p>
+               <p> <span>Pincode: <input type="number" class="Pincode"  required="" name="ppincode"/> </span></p>
+                <p><span>Occupation : <input type="text" class="Occupation"  required="" name="occupation"/></span>
+                    <span>Yearly Income : <input type="number" class="Yearly_income"  required="" name="Yearly_income"/> </p>
+                <p><span>Parent's Mobile No.: <input type="number" class="Parent_mobile"  required="" name="parent_moblie"/></span></p>
+          </div>
+          <div class="local-add">
+            <p><label>2.</label><span id="local-add">Local Address : <input type="text" class="Local_add"  required="" name="local_add"/></span></p>
+            <p><span>State : <input type="text" class="Loc_add_State"  required="" name="loc_add_state"/></span>
+                <span>District: <input type="text" class="Loc_add_District"  required="" name="loc_add_district"/> </span></p>
+                <p><span>Pincode: <input type="number" class="Loc_add_Pincode"  required="" name="loc_add_pincode"/> </span></p>
+          </div>
+
+          <div class="more_info">
+            <p>3.<span>Student email : <input type="email" class="Student_email"  required="" name="student_email"/></span></p>
+            <p>4.<span>Student Mobile No. : <input type="number" class="Student_mobile"  required="" name="student_mobile"/></span></p>
+            <p>5.<span>Date of Birth : <input type="date" class="Date_of_birth"  required="" name="date_of_birth"/></span>
+                <span>Place of Birth : <input type="text" class="Place_of_birth"  required="" name="place_of_birth"/></span></p>
+            <p>6.<span  required>Gender : <select>
+                <option value=""> - - - - - - - - -  select here - - - - - - - - - -</option>
+                <option value="male"> Male</option>
+                <option value="female"> Female</option>
+                <option value="other"> Other</option>
+            </select></span></p> 
+          </div>
+          
+            <div class="Admission_round">
+            <p>7.<span>Admission Round : </span></p>
+            <div class="addmission_options">
+                <p><span>Cap-I<input type="checkbox" id="cb"  required>
+                </span>
+
+            <span>Cap-II<input type="checkbox"  id="cb">
+                </span>
+            <span>Cap-III<input type="checkbox" name="" id="cb">
+               </span>
+            <span>AC<input type="checkbox" name="" id="cb">
+                </span>
+            <span>IL<input type="checkbox" name="" id="cb">
+                </span>
+            <span>JK<input type="checkbox" name="" id="cb">
+                </span>
+            <span>TFWS<input type="checkbox" name="" id="cb">
+                </span>
+            <span>EWS<input type="checkbox" name="" id="cb">
+                </span></p>
+            </div>
+        </div>
+            <div class="other_info">
+                <p>8.<span> Nationality : <input type="text" class="Nationality" required="" name="nationality"/></span></p>
+                <p>9.<span>Maharashtra State/Other State : <input type="text" class="Other_state"  required="" name="other_state"/></span></p>
+                <p>10.<span>Regilion (Hindu/ Muslim/ Jain/ Sikh/ Parshi/ Buddha) : <input type="text" class="Religion"  required="" name="religion"/></span></p>
+                <p>11.<span>Category (Open/ SC/ ST/ NT1/ NT2/ NT3/ VJ/ DT/ OBC/ SBC/ EWS) : <input type="text" class="Category"  required="" name="category"/></span></p>
+                <p>12.<span>Cast : <input type="text" class="Cast"  required="" name="cast"/></span></p>
+                <p>13.<span>Total PCM Marks : <input type="number" class="PCM_total"  required="" name="pcm_total"/></span></p>
+                <p>14.<span>Physics Marks : <input type="number" class="Physics"  required="" name="physics"/></span>
+                    <span>Chemistry Marks : <input type="number" class="Chemistry"  required="" name="chemistry"/></span>
+                  <p><span>Maths Marks : <input type="number" class="Maths"  required="" name="maths"/></span>
+                    <span>Other Marks : <input type="number" class="Other_marks" name="other_marks"/></span></p>
+                </p>
+                <p>15.<span>Total Fees : <input type="number" class="Total_fees"  required="" name="total_fees"/></span>
+                    <span>Receipt No. : <input type="number" class="Receipt_no"  required="" name="receipt_no"/></span></p>
+                   <p> <span>Date : <input type="date" class="Date"  required="" name="date"/></span></p>
+                <p>16.<span>Adhar Card No : <input type="number" class="Adhar_no"  required="" name="adhar_no"/></span></p>
+                <p>17.<span>Pan Card No: <input type="number" class="Pan_no"  required="" name="pan_no"/></span></p>
+                <p>18.<span >Academic Details:</span>
+                  <table class="Academic_det">
+                    <th>No.</th>
+                    <th>Exam Passed</th>
+                    <th>Board/University</th>
+                    <th>Year of Passing</th>
+                    <th>Marks Obtained</th>
+                    <th>Out of</th>
+                    <th>Percentage</th>
+                    <tr><td>1</td>
+                        <td>SSC</td>
+                        <td><input type="number"  required="" name="s_board"/></td>
+                        <td><input type="number"  required="" name="s_year_of_passing"/></td>
+                        <td><input type="number"  required="" name="s_mrks"/></td>
+                        <td><input type="number"  required="" name="s_outof"/></td>
+                        <td><input type="number"  required="" name="s_percentage"/></td>
+                    </tr>
+                    <tr><td>2</td>
+                        <td>HSC</td>
+                        <td><input type="number"  required="" name="h_board"/></td>
+                        <td><input type="number"  required="" name="h_year_of_passing"/></td>
+                        <td><input type="number"  required="" name="h_mrks"/></td>
+                        <td><input type="number"  required="" name="h_outof"/></td>
+                        <td><input type="number"  required="" name="h_percentage"/></td>
+                    </tr>
+                  </table></p>
+                  
+                <div class="Hostel_info">
+                  <p>19.<span>Do you need hostel accomdation: 
+                    <span>Yes    <input type="checkbox" class="Hostel_yes" id="cb">
+                    </span>
+                    <span>No   <input type="checkbox" class="Hostel_no" id="cb">
+                    </span>
+                  </span></p>
+                  <p>20.<span>If YES : = Hostel Fees : <input type="number" class="Hostel_fees" name="hostel_fees"/></span> </span>
+                    <span>Receipt No. : <input type="number" class="Hostel_receipt" name="hostel_receipt"/></span></p>
+                    <p><span>Date : <input type="date" class="Hostel_date"/></span></p>  
+                </div>
+                    <p class="declaration"><input type="checkbox" name="" id="declaration" required><label>I declare that the information provided is correct </label></p>  
+
+            </div>
+            <button class="Submit_form" onclick="Validate()">Submit</button>
+          </div>
+
+          
+        </div>
+    </form>
+        <script src="{%static 'js/Admission.js' %}"></script>
+    
+</body>
+</html>

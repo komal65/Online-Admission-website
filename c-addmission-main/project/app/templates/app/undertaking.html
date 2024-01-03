@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undertaking</title>
+    <link rel="stylesheet" href="{% static '/css/undertaking.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="college">
+           
+
+            <div class="headerfelx">
+                <div class="pccoerlogo" id="pccoerlogo">
+                    <img src="{%static 'images/pccoer.in.png' %}" alt="pcetlogo" srcset="">
+                </div>
+        
+                <div class="college_info">
+                    <p id="pcet">
+                        Pimpri Chinchwad Education Trust's
+                    </p>
+                    <p id="college_name">
+                        PIMPRI CHINCHWAD COLLEGE OF ENGINEERING & RESEARCH
+                        </p>
+                    <p id="description">
+                         An ISO 9001:2015 Certified Institute / Computer Engineering | Electronics & Telecommunication Engineering | Civil Engineering | 
+                            Mechanical Engineering Programs are NBA Accredited, NAAC A++ Accredited
+                    </p>
+                     <p id="description1">(Approved by Govt. of Maharashtra, Affiliated to SPPU, Approved by AICTE, DTE CODE - 6822)</p>
+                </div>
+  
+             <div class="pcetlogo" id="pcetlogo">
+                <img src="{%static 'images/pcetlogo.jpeg' %}" alt="pcetlogo" srcset="">
+            </div>
+        </div>
+    </div>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Department</li>
+            <li> Admission</li>
+        </ul>
+    </nav>
+    <form action="{% url 'undertaking_name' %}" method="POST">
+    <div class="undertaking" >
+        <h1 id="head">UNDERTAKING</h1>
+        <p id="conditions">I, the     undersigned Mr./Ms.<input type="text" id="name" name="name_u" >
+            {% csrf_token %}
+            have Taken admission in
+            Course on for academic year 2023-24 hereby undertake that :- </p>
+        <ol id="listofconditions">
+            <li>I have read all the rules of admission and after understanding these rules thoroughly, I have filled in the application form for admission for the current year.</li>
+            <li>The information given by me in my application is true to the best of my knowledge and belief. I understand that if any of the statements made by me in the application form or any information supplied by me in connection with my admission is later on at any time, found to be false or incorrect, my admission will be cancelled, fees forfeited and I may be expelled from the college by the Principal.
+            </li>
+            <li>I have taken admission to First Year/ Second Year Engineering course at your college for the academic year 2023-24 through the central admission process as per the rules of the Directorate of Technical Education, Mumbai. Subject to eligibility from Savitribai Phule Pune University.
+            </li>
+            <li id="rule4">I am presently paying Rs.<input type="number" id="feedeclare" >
+            /- as interim fees as per Fees Regulating Authority, Mumbai. However, I understand and agree to pay the balance amount of fees as per further notification by Fees Regulating Authority, Mumbai in this regard.</li>
+            <li>I am also aware that the fees such as University Examination Fee, Eligibility Fees, and other fees as prescribed by the University shall be paid by me as and when required.</li>
+            <li> I have not been debarred from appearing at any examination held by any Government constituted or statutory examination authority in India.</li>
+            <li>I am aware that any rule imposed by the University such as 'imposing limits on the number of attempts permissible to pass any examination' shall be binding on me.</li>
+            <li>I hereby agree to conform to any Rules, Acts and Laws enforced by Government and I hereby undertake that, I will do nothing either inside or outside the college which may result in disciplinary action against me under these rules, acts and laws referred to.
+            </li>
+            <li> I fully understand that the Principal has a right to expel me from the college for any infringement of the rules of conduct and discipline prescribed by the college or University or Government and the undertaking given above.</li>
+            <li><span id="cnd1">Condition of minimum attendance:</span> I am fully aware that, I will not be allowed to appear for the examination if I do not attend minimum 75 percent classes of theory, practical. I am also aware that I will not be allowed to appear for the examination, if I fail to submit satisfactorily all the assignments, jobs, journals, drawings, reports as specified by the University within stipulated time limit.</li>
+                
+            <li>I fully understand and am aware that I shall not indulge in only ragging/bullying of any fellow. Student in the college and commission of such an act is a criminal offence punishable under law.
+            </li>
+            <li>I shall strictly abide by all the rules and regulations prescribed by the college authorities and the Savitribai Phule Pune University.</li>
+        </ol>
+        <p id="agreement"><input type="checkbox"> I hereby affirm my consent and commitment to abide by the terms and conditions outlined in this agreement.</p>
+        <button id="submit" > Submit </button>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/static/images/blur-clg.png'); /* Replace with the URL of your background image */
+        filter: blur(10px); /* Adjust the blur radius as needed */
+        z-index: -1;
+    }
+
+.container {
+    display:flex;
+    flex-direction: row;
+  width: 1000px;
+  height: 650px;
+  margin-left: 300px;
+  margin-top: 30px;
+  border-radius: 40px;
+  box-shadow: 3px 3px 13px 2px rgba(0, 0, 0, 0.3);
+  background-color: white; 
+}
+.container2{
+    width:400px;
+    
+}
+.container3{
+    padding: 50px;
+    width:440px;
+    height:554px;
+    background-color:#3b5999;
+    margin-left: 95px;
+    margin-top: -1px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px ;
+       
+}
+#img{
+    width: 350px;
+    margin-top: 140px;
+    height:350px;
+    margin-left: 80px;   
+    
+ 
+}
+h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    margin-top:50px;
+    color: white;
+    
+}
+p{
+    font-size: 18px;
+    padding-top: 25px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+input{
+    
+    width:400px;
+    height:35px;
+    margin-top: 6px;
+    border-radius:10px;
+    border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #eee;
+  border-color: antiquewhite;
+  font-family: "Poppins", sans-serif;
+  
+}
+button{
+    
+    margin-top: 50px;
+    font-weight: normal;
+    
+    width:300px;
+    font-size:25px;
+    display: inline-block;
+    font-size: 22px;
+    background-color: #ADBBEE;
+    border-radius: 25px ;
+    font-family:"Poppins", sans-serif;  
+    color:white;
+    padding:10px; 
+    position: relative;
+   left:50px;   
+   border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  font-weight: bold;
+  border-color: antiquewhite;
+}
+#button{
+    width:300px;
+    margin:2px;
+    margin-top: 20px;
+    position: relative;
+    left:45px;
+    background-color: #CDDBDF;   
+}
+button:hover{
+    color:black;
+    
+    height: 50px;
+    
+}
+.container3 h1{
+    position: relative;
+    top:1rem;
+}

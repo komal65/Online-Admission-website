@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static '/css/signup.css'%}">
+</head>
+<body>
+    <div class="signupFrm" >
+        <form  class="form" method = "POST" action="{% url 'register' %}">
+            {% csrf_token %}
+          <h1 class="title" style="color:white;">Sign up</h1>
+    
+          <div class="inputContainer">
+            <input type="text" class="input" placeholder="First Name" name = "firstname" autocomplete="off" required>
+            <label for="" class="label">Firstname</label>
+          </div>
+
+          <div class="inputContainer">
+            <input type="text" class="input" placeholder="Last Name" name = "lastname" autocomplete="off" required>
+            <label for="" class="label">Lastname</label>
+          </div>
+    
+          <div class="inputContainer">
+            <input type="text" class="input" placeholder="Email" name = "email" autocomplete="off" required>
+            <label for="" class="label">Email</label>
+          </div>
+    
+          <div class="inputContainer">
+            <input type="text" class="input" placeholder="Password" name = "password" autocomplete="off" required>
+            <label for="" class="label">Password</label>
+          </div>
+    
+          <div class="inputContainer">
+            <input type="text" class="input" placeholder="Confirm Password" name = "cpassword" autocomplete="off" required>
+            <label for="" class="label">Confirm Password</label>
+          </div>
+          <p style="color:white;">Already, have account ? 
+            <a href="{% url 'loginpage' %}" style="color:white;"><b> Login</b></a>
+          <input type="submit" class="submitBtn" value="Sign up"></p>
+        </form>
+      </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Get rid of all default margins/paddings. Set typeface */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "lato", sans-serif;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/static/images/blur-clg.png'); /* Replace with the URL of your background image */
+  filter: blur(10px); /* Adjust the blur radius as needed */
+  z-index: -1;
+}
+/* Puts the form in the center both horizontally and vertically. Sets its height to 100% of the viewport's height */
+
+.signupFrm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+.signupFrm h1{
+  margin-left: 7rem;
+}
+  .form {
+    background-color:#3b5999;
+    width: 400px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+  }
+  
+  .title {
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+
+  .inputContainer {
+    position: relative;
+    height: 45px;
+    width: 90%;
+    margin-bottom: 17px;
+  }
+
+
+.input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 80%;
+    width: 100%;
+    border: 2px solid #eaeaea;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;
+    outline: none;
+    background-color: white;
+    z-index: 1;
+  }
+  
+  /* Hide the placeholder texts (a) */
+  
+  .input ::placeholder {
+    color: black;
+    
+  }
+
+  /* Styling text labels */
+
+.label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0 4px;
+   
+    color: black;
+    font-size: 1rem;
+    transition: 0.5s;
+    z-index: 0;
+  }
+
+  .submitBtn {
+    display: block;
+    margin-left: 8.5rem;
+
+    padding: 15px 30px;
+    border: none;
+    background-color: #ADBBEE;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  
+  .submitBtn:hover {
+    background-color: #12c70c;
+    transform: translateY(-2px);
+  }
+
+  
+
+  .input:focus {
+    border: 2px solid #0c98c7;
+  }
+
+  .input:not(:placeholder-shown)+ .label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+  }
